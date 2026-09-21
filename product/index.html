@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Famora — Health Diary for Parents: Blood Pressure · Glucose · Weight · Medication</title>
+<meta name="description" content="Famora is a health diary designed for aging parents and their families: blood pressure, glucose and weight logging, medication plans, trend charts and doctor-ready PDF reports. Private by design — everything stays in your own iCloud.">
+<link rel="alternate" hreflang="en" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/"><link rel="alternate" hreflang="zh-Hans" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/"><link rel="alternate" hreflang="zh-Hant" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/"><link rel="alternate" hreflang="ja" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/"><link rel="alternate" hreflang="es" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/"><link rel="alternate" hreflang="pt-BR" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/"><link rel="alternate" hreflang="fr" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/"><link rel="alternate" hreflang="de" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/"><link rel="alternate" hreflang="ko" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/"><link rel="alternate" hreflang="ru" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/"><link rel="alternate" hreflang="x-default" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">
+<link rel="canonical" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">
+<style>
+:root{--blue:#0d9488;--ink:#1c2330;--sub:#5b6472;--line:#e8ecf2;--bg:#f7faf9;--card:#ffffff;--amber:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","PingFang TC","Helvetica Neue",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(247,250,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.brand img{width:30px;height:30px;border-radius:8px}
+nav.langs{display:flex;gap:12px;font-size:13px;flex-wrap:wrap;justify-content:flex-end}
+nav.langs a.on{font-weight:700;color:var(--ink)}
+.hero{text-align:center;padding:64px 0 40px}
+.hero h1{font-size:34px;line-height:1.25;letter-spacing:.2px}
+.hero p.sub{color:var(--sub);font-size:18px;margin:14px auto 6px;max-width:640px}
+.badges{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--sub)}
+.cta{display:inline-block;margin-top:22px;background:var(--ink);color:#fff;font-weight:600;font-size:16px;padding:12px 26px;border-radius:12px}
+.cta:hover{opacity:.9}
+.shots-hero{margin-top:44px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.shot{width:220px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 12px 30px rgba(28,35,48,.08)}
+.shot img{width:100%;border-radius:18px;display:block}
+section{padding:52px 0}
+section h2{font-size:26px;text-align:center}
+section p.lead{color:var(--sub);text-align:center;margin:8px auto 30px;max-width:600px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;gap:16px;align-items:flex-start}
+.feat img{width:118px;border-radius:14px;border:1px solid var(--line);flex:none}
+.feat .ph{width:118px;flex:none}
+.feat h3{font-size:16px;margin-bottom:4px}
+.feat p{font-size:14px;color:var(--sub)}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px}
+.hl h3{font-size:15.5px;margin-bottom:4px}
+.hl p{font-size:14px;color:var(--sub)}
+.hlgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+dl.faq{max-width:760px;margin:0 auto}
+dl.faq dt{font-weight:700;margin-top:18px;font-size:15.5px}
+dl.faq dd{color:var(--sub);font-size:14.5px;margin-top:4px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--sub);font-size:13.5px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+.ph{aspect-ratio:9/19.5;border-radius:18px;border:2px dashed #c9d4e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#9aa7b5;font-size:12.5px;background:#fbfdfc;text-align:center}
+@media (max-width:640px){.hero h1{font-size:26px}.hero p.sub{font-size:16px}.feat{flex-direction:column}.feat img,.feat .ph{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">Famora</div>
+  <nav class="langs"><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/" class="on">English</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/">简体中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/">繁體中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/">日本語</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/">Español</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/">Português</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/">Français</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/">Deutsch</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/">한국어</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/">Русский</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>Every reading, seen by the whole family</h1>
+  <p class="sub">Blood pressure · Glucose · Weight · Medication — a health diary parents find easy, with a clear view for the family.</p>
+  <div class="badges">
+    <span class="pill">Free download · Easy for seniors</span>
+    <span class="pill">Family sharing via iCloud</span>
+    <span class="pill">Your data stays in your iCloud</span>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">Download on the App Store</a>
+  <div class="shots-hero"><div class="shot"><div class="ph">📱<br>Screenshot</div></div><div class="shot"><div class="ph">📱<br>Screenshot</div></div><div class="shot"><div class="ph">📱<br>Screenshot</div></div></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>One app for the whole health picture</h2>
+  <p class="lead">Record readings, stay on top of medication, and share a doctor-ready report in seconds.</p>
+  <div class="grid"><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>Today at a glance</h3><p>Today's blood pressure, glucose and weight with clear status colors — one screen, nothing hidden.</p></div></div><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>Trend charts</h3><p>14/30/90-day trends for every metric — spot changes before they become problems.</p></div></div><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>Medication plans</h3><p>Daily schedules with check-ins and adherence rates; missed doses are obvious at a glance.</p></div></div><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>Doctor-visit PDF report</h3><p>Generate a 14/30/90-day PDF in one tap and hand it to the doctor at every visit.</p></div></div><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>Detail data export</h3><p>Export raw measurements as an Excel file to share with doctors and family.</p></div></div><div class="feat"><div class="ph">📱<br>Screenshot</div><div><h3>iCloud family sharing</h3><p>Readings upload to iCloud automatically — family sees the latest numbers the moment they open the app.</p></div></div></div>
+</div></section>
+
+<section style="background:#edf6f4"><div class="wrap">
+  <h2>Designed for families</h2>
+  <p class="lead">A simple diary for parents — a clear dashboard for the family.</p>
+  <div class="hlgrid"><div class="hl"><h3>☁️ iCloud family sharing</h3><p>No manual sync. New readings reach the family automatically — everyone stays in the loop.</p></div><div class="hl"><h3>📨 Family health summaries</h3><p>Family members receive a daily digest: today's readings, medication check-ins and anything that needs attention.</p></div><div class="hl"><h3>🔔 Missed-measurement reminders</h3><p>A gentle evening reminder only when today's measurement hasn't been logged — no nagging on good days.</p></div><div class="hl"><h3>⌚ Apple Watch</h3><p>Log readings right from the wrist, with watch-face complications for quick checks.</p></div><div class="hl"><h3>👥 Multiple profiles</h3><p>One independent profile per family member — each with its own data, trends and reports.</p></div><div class="hl"><h3>🛡️ Private by design</h3><p>No account, no server, no ads. Everything lives only in your own private iCloud database.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>FAQ</h2>
+  <p class="lead">Everything you want to know about data, accounts and purchasing.</p>
+  <dl class="faq"><dt>Where is my data stored? Is it safe?</dt><dd>All data lives only in your own private iCloud database (Apple CloudKit). The developer cannot read or export it. There is no account system and no third-party analytics or ad SDK.</dd><dt>Do I need to sign up?</dt><dd>No. Just download and start — sign in to iCloud and syncing plus family sharing work automatically.</dd><dt>Is it free?</dt><dd>The core diary is free. A subscription unlocks the full toolkit: unlimited history and trends, doctor-visit PDF reports, Excel export, family sharing and health summaries.</dd><dt>Which devices are supported?</dt><dd>iPhone and iPad, each with a tailored layout, plus Apple Watch for quick logging. Data syncs via iCloud across your devices.</dd></dl>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 Famora · A health diary made with care</div>
+  <div><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/">Privacy Policy & Support</a> · Contact us: Your.Famora@outlook.com</div>
+</div></footer>
+</body>
+</html>
