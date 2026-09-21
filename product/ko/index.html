@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Famora — 부모님을 위한 건강 다이어리: 혈압 · 혈당 · 체중 · 복약</title>
+<meta name="description" content="Famora는 어르신과 그 가족을 위해 만든 건강 다이어리입니다. 혈압·혈당·체중 기록, 복약 계획과 체크인, 추이 그래프, 진찰용 PDF 보고서. 프라이버시 최우선 — 모든 데이터는 여러분의 iCloud에만 저장됩니다.">
+<link rel="alternate" hreflang="en" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/"><link rel="alternate" hreflang="zh-Hans" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/"><link rel="alternate" hreflang="zh-Hant" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/"><link rel="alternate" hreflang="ja" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/"><link rel="alternate" hreflang="es" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/"><link rel="alternate" hreflang="pt-BR" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/"><link rel="alternate" hreflang="fr" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/"><link rel="alternate" hreflang="de" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/"><link rel="alternate" hreflang="ko" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/"><link rel="alternate" hreflang="ru" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/"><link rel="alternate" hreflang="x-default" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">
+<link rel="canonical" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/">
+<style>
+:root{--blue:#0d9488;--ink:#1c2330;--sub:#5b6472;--line:#e8ecf2;--bg:#f7faf9;--card:#ffffff;--amber:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","PingFang TC","Helvetica Neue",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(247,250,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.brand img{width:30px;height:30px;border-radius:8px}
+nav.langs{display:flex;gap:12px;font-size:13px;flex-wrap:wrap;justify-content:flex-end}
+nav.langs a.on{font-weight:700;color:var(--ink)}
+.hero{text-align:center;padding:64px 0 40px}
+.hero h1{font-size:34px;line-height:1.25;letter-spacing:.2px}
+.hero p.sub{color:var(--sub);font-size:18px;margin:14px auto 6px;max-width:640px}
+.badges{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--sub)}
+.cta{display:inline-block;margin-top:22px;background:var(--ink);color:#fff;font-weight:600;font-size:16px;padding:12px 26px;border-radius:12px}
+.cta:hover{opacity:.9}
+.shots-hero{margin-top:44px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.shot{width:220px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 12px 30px rgba(28,35,48,.08)}
+.shot img{width:100%;border-radius:18px;display:block}
+section{padding:52px 0}
+section h2{font-size:26px;text-align:center}
+section p.lead{color:var(--sub);text-align:center;margin:8px auto 30px;max-width:600px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;gap:16px;align-items:flex-start}
+.feat img{width:118px;border-radius:14px;border:1px solid var(--line);flex:none}
+.feat .ph{width:118px;flex:none}
+.feat h3{font-size:16px;margin-bottom:4px}
+.feat p{font-size:14px;color:var(--sub)}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px}
+.hl h3{font-size:15.5px;margin-bottom:4px}
+.hl p{font-size:14px;color:var(--sub)}
+.hlgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+dl.faq{max-width:760px;margin:0 auto}
+dl.faq dt{font-weight:700;margin-top:18px;font-size:15.5px}
+dl.faq dd{color:var(--sub);font-size:14.5px;margin-top:4px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--sub);font-size:13.5px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+.ph{aspect-ratio:9/19.5;border-radius:18px;border:2px dashed #c9d4e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#9aa7b5;font-size:12.5px;background:#fbfdfc;text-align:center}
+@media (max-width:640px){.hero h1{font-size:26px}.hero p.sub{font-size:16px}.feat{flex-direction:column}.feat img,.feat .ph{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">Famora</div>
+  <nav class="langs"><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">English</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/">简体中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/">繁體中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/">日本語</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/">Español</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/">Português</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/">Français</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/">Deutsch</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/" class="on">한국어</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/">Русский</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>매 측정마다, 가족 모두가 함께 봅니다</h1>
+  <p class="sub">혈압 · 혈당 · 체중 · 복약 — 어르신도 쓰기 쉬운 건강 다이어리, 가족에게는 보기 편한 데이터 화면.</p>
+  <div class="badges">
+    <span class="pill">무료 다운로드 · 어르신도 간편</span>
+    <span class="pill">iCloud 가족 공유</span>
+    <span class="pill">데이터는 여러분의 iCloud에만</span>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">App Store에서 다운로드</a>
+  <div class="shots-hero"><div class="shot"><div class="ph">📱<br>스크린샷</div></div><div class="shot"><div class="ph">📱<br>스크린샷</div></div><div class="shot"><div class="ph">📱<br>스크린샷</div></div></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>하나의 앱으로 건강 전체를 한눈에</h2>
+  <p class="lead">측정을 기록하고, 복약을 놓치지 않고, 몇 초 만에 진료용 보고서를 만들어 공유하세요.</p>
+  <div class="grid"><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>오늘의 기록</h3><p>오늘의 혈압·혈당·체중 수치와 상태 색상을 한 화면에서 확인하세요.</p></div></div><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>추이 그래프</h3><p>14/30/90일 추이를 한눈에 — 변화를 문제가 되기 전에 발견합니다.</p></div></div><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>복약 계획</h3><p>매일의 복용 일정과 체크인, 순응도까지 한눈에 확인됩니다.</p></div></div><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>진찰용 PDF 보고서</h3><p>14/30/90일 PDF 보고서를 한 번의 탭으로 만들어 진료 때 바로 의사에게 전달하세요.</p></div></div><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>상세 데이터 내보내기</h3><p>원본 측정값을 Excel로 내보내 의사와 가족에게 공유할 수 있습니다.</p></div></div><div class="feat"><div class="ph">📱<br>스크린샷</div><div><h3>iCloud 가족 공유</h3><p>측정값이 자동으로 iCloud에 올라갑니다 — 가족이 앱을 열면 바로 최신 수치가 보입니다.</p></div></div></div>
+</div></section>
+
+<section style="background:#edf6f4"><div class="wrap">
+  <h2>가족을 위해 설계했습니다</h2>
+  <p class="lead">부모님께는 간단한 다이어리를, 가족에게는 명확한 관리 화면을.</p>
+  <div class="hlgrid"><div class="hl"><h3>☁️ iCloud 가족 공유</h3><p>수동 동기화가 필요 없습니다. 새 측정값이 자동으로 가족에게 전달됩니다.</p></div><div class="hl"><h3>📨 가족 건강 요약</h3><p>가족은 매일 요약을 받습니다: 오늘의 측정값, 복약 체크인, 주의할 변화.</p></div><div class="hl"><h3>🔔 미측정 알림</h3><p>그날 측정이 아직이면 저녁에 부드럽게 한 번만 알립니다 — 측정했다면 방해하지 않습니다.</p></div><div class="hl"><h3>⌚ Apple Watch</h3><p>손목에서 바로 기록하고, 시계 페이스 컴플리케이션으로 빠르게 확인하세요.</p></div><div class="hl"><h3>👥 다중 프로필</h3><p>가족 한 사람 한 사람 독립된 프로필 — 데이터·추이·보고서가 각각 관리됩니다.</p></div><div class="hl"><h3>🛡️ 프라이버시 최우선</h3><p>계정 없음, 서버 없음, 광고 없음. 모든 데이터는 여러분의 iCloud 개인 데이터베이스에만 저장됩니다.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>자주 묻는 질문</h2>
+  <p class="lead">데이터, 계정, 구매에 대해 궁금하신 모든 것.</p>
+  <dl class="faq"><dt>데이터는 어디에 저장되나요? 안전한가요?</dt><dd>모든 데이터는 여러분의 iCloud 개인 데이터베이스(Apple CloudKit)에만 저장됩니다. 개발자가 읽거나 내보낼 수 없으며, 계정 시스템도 제3자 분석·광고 SDK도 없습니다.</dd><dt>회원가입이 필요한가요?</dt><dd>아니요. 다운로드 후 바로 사용할 수 있습니다. iCloud에 로그인하면 동기화와 가족 공유가 자동으로 작동합니다.</dd><dt>무료인가요?</dt><dd>기본 기록 기능은 무료입니다. 구독하면 무제한 이력과 추이, 진찰용 PDF 보고서, Excel 내보내기, 가족 공유와 건강 요약이 모두 열립니다.</dd><dt>어떤 기기를 지원하나요?</dt><dd>iPhone과 iPad(각각에 최적화된 화면), 그리고 빠른 기록용 Apple Watch를 지원합니다. 데이터는 iCloud를 통해 기기 간 동기화됩니다.</dd></dl>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 Famora · 정성으로 만든 가족 건강 다이어리</div>
+  <div><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/ko/">개인정보 처리방침 및 지원</a> · 문의: Your.Famora@outlook.com</div>
+</div></footer>
+</body>
+</html>
