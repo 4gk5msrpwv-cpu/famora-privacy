@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Famora — ご両親のための健康手帳：血圧 · 血糖 · 体重 · 服薬</title>
+<meta name="description" content="Famora は、ご高齢のご両親とその家族のために作られた健康手帳アプリです。血圧・血糖・体重の記録、服薬計画とチェックイン、トレンドグラフ、受診用 PDF レポート。プライバシー第一——データはあなた自身の iCloud にのみ保存されます。">
+<link rel="alternate" hreflang="en" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/"><link rel="alternate" hreflang="zh-Hans" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/"><link rel="alternate" hreflang="zh-Hant" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/"><link rel="alternate" hreflang="ja" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/"><link rel="alternate" hreflang="es" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/"><link rel="alternate" hreflang="pt-BR" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/"><link rel="alternate" hreflang="fr" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/"><link rel="alternate" hreflang="de" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/"><link rel="alternate" hreflang="ko" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/"><link rel="alternate" hreflang="ru" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/"><link rel="alternate" hreflang="x-default" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">
+<link rel="canonical" href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/">
+<style>
+:root{--blue:#0d9488;--ink:#1c2330;--sub:#5b6472;--line:#e8ecf2;--bg:#f7faf9;--card:#ffffff;--amber:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","PingFang TC","Helvetica Neue",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(247,250,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.brand img{width:30px;height:30px;border-radius:8px}
+nav.langs{display:flex;gap:12px;font-size:13px;flex-wrap:wrap;justify-content:flex-end}
+nav.langs a.on{font-weight:700;color:var(--ink)}
+.hero{text-align:center;padding:64px 0 40px}
+.hero h1{font-size:34px;line-height:1.25;letter-spacing:.2px}
+.hero p.sub{color:var(--sub);font-size:18px;margin:14px auto 6px;max-width:640px}
+.badges{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--sub)}
+.cta{display:inline-block;margin-top:22px;background:var(--ink);color:#fff;font-weight:600;font-size:16px;padding:12px 26px;border-radius:12px}
+.cta:hover{opacity:.9}
+.shots-hero{margin-top:44px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.shot{width:220px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 12px 30px rgba(28,35,48,.08)}
+.shot img{width:100%;border-radius:18px;display:block}
+section{padding:52px 0}
+section h2{font-size:26px;text-align:center}
+section p.lead{color:var(--sub);text-align:center;margin:8px auto 30px;max-width:600px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;gap:16px;align-items:flex-start}
+.feat img{width:118px;border-radius:14px;border:1px solid var(--line);flex:none}
+.feat .ph{width:118px;flex:none}
+.feat h3{font-size:16px;margin-bottom:4px}
+.feat p{font-size:14px;color:var(--sub)}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px}
+.hl h3{font-size:15.5px;margin-bottom:4px}
+.hl p{font-size:14px;color:var(--sub)}
+.hlgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+dl.faq{max-width:760px;margin:0 auto}
+dl.faq dt{font-weight:700;margin-top:18px;font-size:15.5px}
+dl.faq dd{color:var(--sub);font-size:14.5px;margin-top:4px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--sub);font-size:13.5px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+.ph{aspect-ratio:9/19.5;border-radius:18px;border:2px dashed #c9d4e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#9aa7b5;font-size:12.5px;background:#fbfdfc;text-align:center}
+@media (max-width:640px){.hero h1{font-size:26px}.hero p.sub{font-size:16px}.feat{flex-direction:column}.feat img,.feat .ph{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">Famora</div>
+  <nav class="langs"><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">English</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/">简体中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/">繁體中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/" class="on">日本語</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/">Español</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/">Português</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/">Français</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/">Deutsch</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/">한국어</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/">Русский</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>測るたびに、家族みんなで見守る</h1>
+  <p class="sub">血圧 · 血糖 · 体重 · 服薬 —— お年寄りにも使いやすい健康手帳と、家族に見やすいデータビュー。</p>
+  <div class="badges">
+    <span class="pill">無料ダウンロード · シニアにも簡単</span>
+    <span class="pill">iCloud 家族共有</span>
+    <span class="pill">データはあなたの iCloud だけに</span>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">App Store でダウンロード</a>
+  <div class="shots-hero"><div class="shot"><div class="ph">📱<br>スクリーンショット</div></div><div class="shot"><div class="ph">📱<br>スクリーンショット</div></div><div class="shot"><div class="ph">📱<br>スクリーンショット</div></div></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>ひとつのアプリで、健康の全体像を</h2>
+  <p class="lead">測定を記録し、服薬を逃さず、数秒で医師に渡せるレポートを作成。</p>
+  <div class="grid"><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>今日の記録</h3><p>今日の血圧・血糖・体重の数値と状態カラーを、ひと画面で確認できます。</p></div></div><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>トレンドグラフ</h3><p>14/30/90 日のトレンドをひと目で把握。変化を問題になる前に発見できます。</p></div></div><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>服薬計画</h3><p>毎日の服薬スケジュールとチェックイン、遵守率もひと目でわかります。</p></div></div><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>受診用 PDF レポート</h3><p>14/30/90 日の PDF レポートをワンタップで生成し、受診時にそのまま医師へ。</p></div></div><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>詳細データ書き出し</h3><p>生の測定値を Excel に書き出し、医師や家族と共有できます。</p></div></div><div class="feat"><div class="ph">📱<br>スクリーンショット</div><div><h3>iCloud 家族共有</h3><p>測定値は自動で iCloud にアップロード。家族がアプリを開くと最新の数値がすぐ見られます。</p></div></div></div>
+</div></section>
+
+<section style="background:#edf6f4"><div class="wrap">
+  <h2>家族のために設計</h2>
+  <p class="lead">ご両親にはシンプルな手帳を、家族には見やすい管理画面を。</p>
+  <div class="hlgrid"><div class="hl"><h3>☁️ iCloud 家族共有</h3><p>手動同期は不要。新しい測定値が自動で家族に届き、全員が同じ情報を共有します。</p></div><div class="hl"><h3>📨 家族への健康サマリー</h3><p>家族は毎日のサマリーを受け取れます：今日の測定値、服薬チェックイン、気になる変化。</p></div><div class="hl"><h3>🔔 測り忘れリマインダー</h3><p>その日の測定がまだのときだけ、夜にやさしく一度お知らせ。測っていれば通知しません。</p></div><div class="hl"><h3>⌚ Apple Watch</h3><p>手首からすぐに記録。文字盤コンプリケーションで素早く確認できます。</p></div><div class="hl"><h3>👥 複数プロフィール</h3><p>家族一人ひとりに独立したプロフィール。データ・トレンド・レポートも分かれます。</p></div><div class="hl"><h3>🛡️ プライバシー第一</h3><p>アカウント不要、サーバーなし、広告なし。データはあなたの iCloud プライベートデータベースだけに保存されます。</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>よくある質問</h2>
+  <p class="lead">データ・アカウント・購入についてよくいただくご質問です。</p>
+  <dl class="faq"><dt>データはどこに保存されますか？安全ですか？</dt><dd>すべてのデータはあなた自身の iCloud プライベートデータベース（Apple CloudKit）にのみ保存されます。開発者が読み取りや書き出しをすることはできません。アカウント登録も、サードパーティの解析・広告 SDK もありません。</dd><dt>アカウント登録は必要ですか？</dt><dd>不要です。ダウンロードしてすぐ使い始められます。iCloud にサインインすれば、同期と家族共有は自動で動作します。</dd><dt>無料で使えますか？</dt><dd>基本の記録機能は無料です。サブスクリプションで無制限の履歴とトレンド、受診用 PDF レポート、Excel 書き出し、家族共有と健康サマリーが使えるようになります。</dd><dt>対応デバイスは？</dt><dd>iPhone と iPad（それぞれに最適化されたレイアウト）、すばやい記録用の Apple Watch に対応。データは iCloud 経由でデバイス間で同期されます。</dd></dl>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 Famora · 心を込めて作った家族の健康手帳</div>
+  <div><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/ja/">プライバシーポリシーとサポート</a> · お問い合わせ： Your.Famora@outlook.com</div>
+</div></footer>
+</body>
+</html>
