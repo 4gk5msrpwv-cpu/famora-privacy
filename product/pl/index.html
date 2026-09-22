@@ -17,8 +17,19 @@ header{position:sticky;top:0;background:rgba(247,250,249,.92);backdrop-filter:bl
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
 .brand img{width:30px;height:30px;border-radius:8px}
-nav.langs{display:flex;gap:12px;font-size:13px;flex-wrap:wrap;justify-content:flex-end}
-nav.langs a.on{font-weight:700;color:var(--ink)}
+/* 右上角语言下拉（CSS-only details/summary，无 JS） */
+details.langmenu{position:relative}
+details.langmenu summary{list-style:none;cursor:pointer;user-select:none;font-size:13px;color:var(--ink);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:#fff;
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+details.langmenu summary::-webkit-details-marker{display:none}
+details.langmenu[open] summary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.langmenu-list{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--line);
+  border-radius:12px;box-shadow:0 10px 28px rgba(28,35,48,.14);padding:6px;max-height:62vh;overflow-y:auto;
+  min-width:190px;display:flex;flex-direction:column;z-index:30}
+.langmenu-list a{font-size:13px;color:var(--ink);padding:7px 12px;border-radius:8px;white-space:nowrap}
+.langmenu-list a:hover{background:#f0fdfa}
+.langmenu-list a.on{color:var(--blue);font-weight:700}
 .hero{text-align:center;padding:64px 0 40px}
 .hero h1{font-size:34px;line-height:1.25;letter-spacing:.2px}
 .hero p.sub{color:var(--sub);font-size:18px;margin:14px auto 6px;max-width:640px}
@@ -54,7 +65,29 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <body>
 <header><div class="wrap">
   <div class="brand">Famora</div>
-  <nav class="langs"><a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">English</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/">简体中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/">繁體中文</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/">日本語</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/">Español</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/">Português</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/">Français</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/">Deutsch</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/">한국어</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/">Русский</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/it/">Italiano</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/nl/">Nederlands</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pl/" class="on">Polski</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/tr/">Türkçe</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/da/">Dansk</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/sv/">Svenska</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/nb/">Norsk bokmål</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/id/">Bahasa Indonesia</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/vi/">Tiếng Việt</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ms/">Bahasa Melayu</a> · <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fil/">Filipino</a></nav>
+  <details class="langmenu"><summary>🌐 Polski</summary><div class="langmenu-list">
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/">English</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hans/">简体中文</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/zh-Hant/">繁體中文</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ja/">日本語</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/es/">Español</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pt-BR/">Português</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fr/">Français</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/de/">Deutsch</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ko/">한국어</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ru/">Русский</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/it/">Italiano</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/nl/">Nederlands</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/pl/" class="on">Polski</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/tr/">Türkçe</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/da/">Dansk</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/sv/">Svenska</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/nb/">Norsk bokmål</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/id/">Bahasa Indonesia</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/vi/">Tiếng Việt</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/ms/">Bahasa Melayu</a>
+  <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/product/fil/">Filipino</a>
+</div></details>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -72,7 +105,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <section><div class="wrap">
   <h2>Jedna aplikacja — pełny obraz zdrowia</h2>
   <p class="lead">Rejestruj pomiary, nie pomijaj dawek i w kilka sekund udostępnij lekarzowi raport.</p>
-  <div class="grid"><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Dziś w skrócie</h3><p>Ciśnienie, cukier i waga na dziś z czytelnymi stanami kolorystycznymi — jeden ekran, nic nieukryte.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Wykresy trendów</h3><p>Trendy 14/30/90 dni dla każdego wskaźnika — dostrzeż zmiany, zanim staną się problemem.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Plany przyjmowania leków</h3><p>Codzienne harmonogramy z odhaczeniami i wskaźnikami regularności; pominięte dawki widać od razu.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Raporty i eksport</h3><p>Raporty PDF za 14/30/90 dni dla lekarza oraz eksport surowych danych do Excela — udostępnij lekarzowi i bliskim.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Szybki zapis</h3><p>Zapisz cały dzień w 30 sekund: ciśnienie, cukier, waga i leki jednym dotknięciem — obsługiwane wprowadzanie głosowe.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Rodzinny udział przez iCloud</h3><p>Pomiary automatycznie trafiają do iCloud — rodzina widzi świeże liczby od razu po otwarciu aplikacji.</p></div></div></div>
+  <div class="grid"><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Dziś w skrócie</h3><p>Ciśnienie, cukier i waga na dziś z czytelnymi stanami kolorystycznymi — jeden ekran, nic nieukryte.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Wykresy trendów</h3><p>Trendy 14/30/90 dni dla każdego wskaźnika — dostrzeż zmiany, zanim staną się problemem.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Plany przyjmowania leków</h3><p>Codzienne harmonogramy z zaznaczeniami i wskaźnikami regularności; pominięte dawki widać od razu.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Raporty i eksport</h3><p>Raporty PDF za 14/30/90 dni dla lekarza oraz eksport surowych danych do Excela — udostępnij lekarzowi i bliskim.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Szybki zapis</h3><p>Zapisz cały dzień w 30 sekund: ciśnienie, cukier, waga i leki jednym dotknięciem — obsługiwane wprowadzanie głosowe.</p></div></div><div class="feat"><div class="ph">📱<br>Zrzut ekranu</div><div><h3>Rodzinny udział przez iCloud</h3><p>Pomiary automatycznie trafiają do iCloud — rodzina widzi świeże liczby od razu po otwarciu aplikacji.</p></div></div></div>
 </div></section>
 
 <section style="background:#edf6f4"><div class="wrap">
