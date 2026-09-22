@@ -38,13 +38,22 @@
   body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
        background:var(--bg);color:var(--ink);line-height:1.8;font-size:15px}
   header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0}
-  h1{font-size:19px}
-  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px}
-  .langbar{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:8px}
-  .langbar a{font-size:12.5px;text-decoration:none;color:var(--tab);border:1px solid var(--line);
-             border-radius:999px;padding:3px 11px;background:#fff}
-  .langbar a.on{color:#fff;background:var(--teal);border-color:var(--teal)}
+  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0;position:relative}
+  h1{font-size:19px;padding-right:104px}
+  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px;padding-bottom:6px}
+  /* 右上角语言下拉（CSS-only details/summary，无 JS） */
+  details.langmenu{position:relative;float:right;margin-left:12px}
+  details.langmenu summary{list-style:none;cursor:pointer;user-select:none;font-size:12.5px;color:var(--tab);
+    border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#fff;
+    display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  details.langmenu summary::-webkit-details-marker{display:none}
+  details.langmenu[open] summary{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .langmenu-list{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:6px;max-height:62vh;overflow-y:auto;
+    min-width:190px;display:flex;flex-direction:column;z-index:30}
+  .langmenu-list a{font-size:13px;color:var(--tab);text-decoration:none;padding:7px 12px;border-radius:8px;white-space:nowrap}
+  .langmenu-list a:hover{background:var(--teal-bg)}
+  .langmenu-list a.on{color:var(--teal);font-weight:700}
   main{max-width:860px;margin:0 auto;padding:22px 20px 60px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
   .summary{background:var(--green-bg);border:1px solid #bbf7d0;border-radius:12px;padding:16px 20px;margin-bottom:18px;font-size:14.5px;color:#166534}
@@ -68,9 +77,7 @@
 <body>
 <header>
   <div class="head-inner">
-    <h1>❤️ Famora Integritetspolicy och Support</h1>
-    <div class="head-meta">Ikraftträdandedatum: 2026-09-21 ｜ Utvecklare: Frank Zhou ｜ Kontakt: Your.Famora@outlook.com</div>
-    <nav class="langbar">
+    <details class="langmenu"><summary>🌐 Svenska</summary><div class="langmenu-list">
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/">English</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hans/">简体中文</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hant/">繁體中文</a>
@@ -92,7 +99,9 @@
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/vi/">Tiếng Việt</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/ms/">Bahasa Melayu</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/fil/">Filipino</a>
-    </nav>
+</div></details>
+    <h1>❤️ Famora Integritetspolicy och Support</h1>
+    <div class="head-meta">Ikraftträdandedatum: 2026-09-21 ｜ Utvecklare: Frank Zhou ｜ Kontakt: Your.Famora@outlook.com</div>
   </div>
 </header>
 <main>
@@ -109,10 +118,10 @@
 <p><b>Enhetens funktioner och systembehörigheter:</b></p>
 <ul><li><b>Apple Hälsa (HealthKit)</b> — med ditt uttryckliga medgivande kan appen <b>skriva</b> mätningar du registrerar (blodtryck, blodsocker, vikt) till Hälsa-appen och <b>läsa</b> blodtrycks-, blodsocker- och viktvärden för att importera dem (till exempel från en kopplad blodtrycksmätare). Hälsodata bearbetas på enheten och skrivs till/läses endast från Apples Hälsolager. <b>Utvecklaren tar aldrig emot, ser eller lagrar några hälsodata.</b> Du kan bevilja eller återkalla varje behörighet när som helst i Hälsa-appen.</li><li><b>iCloud (CloudKit)</b> — används endast om du aktiverar Premium-familjedelningen som beskrivs ovan; annars upprättas ingen iCloud-anslutning. CloudKit-överföring och lagring drivs och krypteras av Apple enligt Apples egen integritetspolicy.</li><li><b>Fotoväljaren (valfri profilbild)</b> — om du väljer att ange en profilbild sker valet helt via Apples systeminbyggda fotoväljare: endast den enskilda bild du uttryckligen väljer kopieras, skalas ner och lagras i appens lokala databas (och delas med profilen när den valfria iCloud-familjedelningen är aktiverad). Resten av ditt fotobibliotek läses aldrig, och foton laddas aldrig upp till någon server. Du kan ta bort profilbilden när som helst i profilredigeraren.</li><li><b>Mikrofon och taligenkänning (valfri röstinput)</b> — med ditt uttryckliga medgivande kan du diktera mätningar i stället för att skriva. Ljud bearbetas på enheten av Apples taligenkänning i realtid, spelas aldrig in på disk, lagras inte eller laddas inte upp, och inget ljud når någonsin utvecklaren.</li><li><b>Apple Watch-app (valfri följeslagare)</b> — Famora levereras med en valfri följarapp för Apple Watch. Den delar samma databas som iPhone-appen via ditt eget iCloud-konto, så mätningar som görs på klockan är exakt de data som beskrivs ovan. Klockappen upprättar inga egna nätverksanslutningar och samlar inte in något på egen hand; du kan ta bort den från klockan när som helst.</li><li><b>Notiser</b> — endast lokala notiser, som endast används för att leverera de mät- och medicinpåminnelser du själv ställer in samt valfria familjehälsosammanfattningar som lokala notiser när appen uppdateras i bakgrunden (iOS uppdatering av appar i bakgrunden). Inget reklam- eller marknadsföringsinnehåll och ingen egen push-infrastruktur.</li><li><b>Behörigheter vi aldrig begär</b> — ingen plats, kontakter, kamera, kalender eller appspårningsgodkännande.</li></ul>
 <h3>3. Tredjeparter, spårning och reklam: inget</h3>
-<ul><li><b>Ingen tredjepartskod</b> — appen har ingen reklam-SDK, ingen analys-SDK (ingen Firebase eller liknande), ingen krashrapportering, attribution eller pushmarknadskomponent.</li><li><b>Ingen spårning</b> — ingen IDFA, ingen dialog för appspårningstransparens, ingen spårning mellan appar eller webbplatser, inget enhetsfingeravtryck.</li><li><b>Vi säljer, delar eller byter aldrig användardata</b>, och vi bedriver ingen form av datamonetisering.</li><li><b>Köp</b> — den valfria Premium-prenumerationen hanteras helt av <b>Apples StoreKit</b>. Utvecklaren ser aldrig dina betalningsuppgifter eller personliga identifierare; Apples egen integritetspolicy gäller för transaktionen.</li><li><b>Förutom Apples tjänster</b> (HealthKit och StoreKit) är den enda nätverksförfrågan appen kan göra <b>att läsa in denna integritets-/supportsida</b> i den inbyggda läsaren (ingen adressfält, inga kakor, inga identifierare, navigering till andra domäner är blockerad). Sidan hostas av en tredjeparts statisk värd; inläsningen medför inga konto- eller enhetsuppgifter.</li></ul>
+<ul><li><b>Ingen tredjepartskod</b> — appen har ingen reklam-SDK, ingen analys-SDK (ingen Firebase eller liknande), ingen krashrapportering, attribution eller pushmarknadskomponent.</li><li><b>Ingen spårning</b> — ingen IDFA, ingen dialog för appspårningstransparens, ingen spårning mellan appar eller webbplatser, inget enhetsfingeravtryck.</li><li><b>Vi säljer, delar eller byter aldrig användardata</b>, och vi bedriver ingen form av datamonetisering.</li><li><b>Köp</b> — den valfria Premium-prenumerationen hanteras helt av <b>Apples StoreKit</b>. Utvecklaren ser aldrig dina betalningsuppgifter eller personliga identifierare; Apples egen integritetspolicy gäller för transaktionen.</li><li><b>Förutom Apples tjänster</b> (HealthKit och StoreKit) är den enda nätverksförfrågan appen kan göra <b>att läsa in denna integritets-/supportsida</b> i den inbyggda läsaren (inget adressfält, inga kakor, inga identifierare, navigering till andra domäner är blockerad). Sidan hostas av en tredjeparts statisk värd; inläsningen medför inga konto- eller enhetsuppgifter.</li></ul>
 <h3>4. Medicinsk ansvarsfriskrivning</h3>
 <p>Famora är ett <b>registrerings- och organiseringsverktyg för familjer</b>, inte en medicinsk produkt och inte en reglerad diagnostisk produkt. Den mäter själv ingenting: alla mätningar anges av användaren eller importeras från enheter kopplade till Apple Health. Statistik (medelvärden, antal, trenddiagram, markeringar av målområden) är <b>endast databeskrivningar</b> och utgör inte medicinska slutsatser, diagnos eller behandlingsrådgivning. Rådfråga alltid en kvalificerad läkare innan du fattar hälsobeslut.</p>
-<h3>5. Dataretention och radering</h3>
+<h3>5. Datalagring och radering</h3>
 <ul><li>Dina data finns endast i den lokala databasen på denna enhet.</li><li>Du kan radera alla mät- och medicindata när som helst via <b>Inställningar → Profil → Rensa alla mät- och medicindata</b>.</li><li>Att radera en profil <b>raderar profilen permanent tillsammans med alla blodtrycks-, blodsocker-, vikt- och medicindata som registrerats under den</b>; detta kan inte återställas. Att avinstallera appen tar bort hela den lokala databasen.</li></ul>
 <h3>6. Barns integritet</h3>
 <p>Famora är en <b>vårdare-inriktad dagbok</b> avsedd för vuxna som registrerar familjemedlemmars (till exempel äldre föräldrars) hälsomätningar. Den riktar sig inte till barn, erbjuder ingen chatt, kommentarer, offentliga profiler, upptäckt, rekommendationer eller offentlig delning av användarskapat innehåll och samlar inte medvetet in någon personlig information från någon — inklusive barn.</p>
