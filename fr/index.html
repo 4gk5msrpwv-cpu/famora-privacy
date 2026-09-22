@@ -38,13 +38,22 @@
   body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
        background:var(--bg);color:var(--ink);line-height:1.8;font-size:15px}
   header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0}
-  h1{font-size:19px}
-  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px}
-  .langbar{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:8px}
-  .langbar a{font-size:12.5px;text-decoration:none;color:var(--tab);border:1px solid var(--line);
-             border-radius:999px;padding:3px 11px;background:#fff}
-  .langbar a.on{color:#fff;background:var(--teal);border-color:var(--teal)}
+  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0;position:relative}
+  h1{font-size:19px;padding-right:104px}
+  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px;padding-bottom:6px}
+  /* 右上角语言下拉（CSS-only details/summary，无 JS） */
+  details.langmenu{position:relative;float:right;margin-left:12px}
+  details.langmenu summary{list-style:none;cursor:pointer;user-select:none;font-size:12.5px;color:var(--tab);
+    border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#fff;
+    display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  details.langmenu summary::-webkit-details-marker{display:none}
+  details.langmenu[open] summary{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .langmenu-list{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:6px;max-height:62vh;overflow-y:auto;
+    min-width:190px;display:flex;flex-direction:column;z-index:30}
+  .langmenu-list a{font-size:13px;color:var(--tab);text-decoration:none;padding:7px 12px;border-radius:8px;white-space:nowrap}
+  .langmenu-list a:hover{background:var(--teal-bg)}
+  .langmenu-list a.on{color:var(--teal);font-weight:700}
   main{max-width:860px;margin:0 auto;padding:22px 20px 60px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
   .summary{background:var(--green-bg);border:1px solid #bbf7d0;border-radius:12px;padding:16px 20px;margin-bottom:18px;font-size:14.5px;color:#166534}
@@ -68,9 +77,7 @@
 <body>
 <header>
   <div class="head-inner">
-    <h1>❤️ Politique de confidentialité et assistance Famora</h1>
-    <div class="head-meta">Date d'entrée en vigueur : 2026-09-21 ｜ Développeur : Frank Zhou ｜ Contact : Your.Famora@outlook.com</div>
-    <nav class="langbar">
+    <details class="langmenu"><summary>🌐 Français</summary><div class="langmenu-list">
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/">English</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hans/">简体中文</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hant/">繁體中文</a>
@@ -92,7 +99,9 @@
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/vi/">Tiếng Việt</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/ms/">Bahasa Melayu</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/fil/">Filipino</a>
-    </nav>
+</div></details>
+    <h1>❤️ Politique de confidentialité et assistance Famora</h1>
+    <div class="head-meta">Date d'entrée en vigueur : 2026-09-21 ｜ Développeur : Frank Zhou ｜ Contact : Your.Famora@outlook.com</div>
   </div>
 </header>
 <main>
