@@ -38,13 +38,22 @@
   body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
        background:var(--bg);color:var(--ink);line-height:1.8;font-size:15px}
   header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0}
-  h1{font-size:19px}
-  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px}
-  .langbar{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:8px}
-  .langbar a{font-size:12.5px;text-decoration:none;color:var(--tab);border:1px solid var(--line);
-             border-radius:999px;padding:3px 11px;background:#fff}
-  .langbar a.on{color:#fff;background:var(--teal);border-color:var(--teal)}
+  .head-inner{max-width:860px;margin:0 auto;padding:14px 20px 0;position:relative}
+  h1{font-size:19px;padding-right:104px}
+  .head-meta{font-size:12.5px;color:var(--sub);margin:4px 0 8px;padding-bottom:6px}
+  /* 右上角语言下拉（CSS-only details/summary，无 JS） */
+  details.langmenu{position:relative;float:right;margin-left:12px}
+  details.langmenu summary{list-style:none;cursor:pointer;user-select:none;font-size:12.5px;color:var(--tab);
+    border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#fff;
+    display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  details.langmenu summary::-webkit-details-marker{display:none}
+  details.langmenu[open] summary{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .langmenu-list{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:6px;max-height:62vh;overflow-y:auto;
+    min-width:190px;display:flex;flex-direction:column;z-index:30}
+  .langmenu-list a{font-size:13px;color:var(--tab);text-decoration:none;padding:7px 12px;border-radius:8px;white-space:nowrap}
+  .langmenu-list a:hover{background:var(--teal-bg)}
+  .langmenu-list a.on{color:var(--teal);font-weight:700}
   main{max-width:860px;margin:0 auto;padding:22px 20px 60px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
   .summary{background:var(--green-bg);border:1px solid #bbf7d0;border-radius:12px;padding:16px 20px;margin-bottom:18px;font-size:14.5px;color:#166534}
@@ -68,9 +77,7 @@
 <body>
 <header>
   <div class="head-inner">
-    <h1>❤️ Famora Privatlivspolitik og Support</h1>
-    <div class="head-meta">Ikrafttrædelsesdato: 2026-09-21 ｜ Udvikler: Frank Zhou ｜ Kontakt: Your.Famora@outlook.com</div>
-    <nav class="langbar">
+    <details class="langmenu"><summary>🌐 Dansk</summary><div class="langmenu-list">
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/">English</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hans/">简体中文</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/zh-Hant/">繁體中文</a>
@@ -92,7 +99,9 @@
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/vi/">Tiếng Việt</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/ms/">Bahasa Melayu</a>
   <a href="https://4gk5msrpwv-cpu.github.io/famora-privacy/fil/">Filipino</a>
-    </nav>
+</div></details>
+    <h1>❤️ Famora Privatlivspolitik og Support</h1>
+    <div class="head-meta">Ikrafttrædelsesdato: 2026-09-21 ｜ Udvikler: Frank Zhou ｜ Kontakt: Your.Famora@outlook.com</div>
   </div>
 </header>
 <main>
@@ -107,11 +116,11 @@
 <p>Famora <b>indsamler ingen personlige oplysninger</b>. Konkret:</p>
 <ul><li><b>Ingen tilmelding, ingen login.</b> Vi anmoder ikke om eller modtager dit navn, din e-mail, dit telefonnummer, dine kontakter, din placering eller andre identifikatorer.</li><li><b>Alle data forbliver på denne enhed.</b> Målinger, medicinplaner, profiler og påmindelser gemmes i appens <b>lokale database på enheden</b> (Apple SwiftData). Data forlader aldrig enheden, medmindre <b>du</b> udtrykkeligt eksporterer eller deler en rapport (f.eks. PDF-rapporten til lægebesøget, du vælger at dele), eller aktiverer den valgfri iCloud-familedeling beskrevet nedenfor. Udvikleren har ingen adgang til den.</li><li><b>Valgfri iCloud-familedeling (kun Premium).</b> Deling af profiler med familiemedlemmer er en del af Famora Premium og er altid frivillig og invitationsbaseret: den bruger din egen Apple iCloud (CloudKit) til at dele profiler med de familiemedlemmer, du udtrykkeligt inviterer — f.eks. så voksne børn kan se en ældre forælders målinger, eller så en ældre kan bruge appen i Ældremode uden nogen opsætning. Med <b>Auto Synk</b> (en indstilling i appen, også under din kontrol) uploades nye målinger og medicintjek automatisk til iCloud inden for sekunder, mens du bruger appen, og hver gang den går i baggrunden. Inviterede familiemedlemmer modtager et <b>sundhedsoverblik</b> (dagens målinger og medicinoverholdelse) i appens Beskedcenter og en lokal notifikation, når nye overblik ankommer, mens appen opdateres i baggrunden. Data krypteres under overførsel og opbevaring af Apples infrastruktur; de gemmes aldrig på nogen Famora-server, og udvikleren har ingen adgang til delt indhold. Deling er slået fra som standard og starter først, efter du har oprettet en invitation i appen; du kan slå Auto Synk fra eller standse delingen når som helst.</li></ul>
 <p><b>Enhedsfunktioner og systemtilladelser:</b></p>
-<ul><li><b>Apple Sundhed (HealthKit)</b> — med dit udtrykkelige samtykke kan appen <b>skrive</b> målinger, du registrerer (blodtryk, blodsukker, vægt), til Sundhed-appen og <b>læse</b> blodtryks-, blodsukker- og vægtdata for at importere dem (f.eks. fra et tilkoblet blodtryksmåler). Sundhedsdata behandles på enheden og skrive/læses kun fra Apples Sundhedslager. <b>Udvikleren modtager aldrig, ser aldrig eller gemmer aldrig sundhedsdata.</b> Du kan give eller tilbagekalde hver tilladelse når som helst i Sundhed-appen.</li><li><b>iCloud (CloudKit)</b> — tilgås kun, hvis du aktiverer den ovenfor beskrevne Premium-familedeling; ellers oprettes ingen iCloud-forbindelse. CloudKit-overførsel og -opbevaring drives og krypteres af Apple efter Apples egen privatlivspolitik.</li><li><b>Foto-vælger (valgfrit profilbillede)</b> — hvis du vælger at angive et profilfoto, sker valget udelukkende via Apples systemindbyggede Foto-vælger: kun det enkelte billede, du udtrykkeligt vælger, kopieres, nedskaleres og gemmes i appens lokale database (og deles med profilen, når den valgfri iCloud-familedeling er aktiveret). Resten af dit fotobibliotek læses aldrig, og fotos uploades aldrig til nogen server. Du kan fjerne profilbilledet når som helst i profilleditoren.</li><li><b>Mikrofon og talegenkendelse (valgfri stemmeinput)</b> — med dit udtrykkelige samtykke kan du diktere målinger i stedet for at taste. Lyd behandles på enheden af Apples talegenkendelse i realtid, optages aldrig på disk, gemmes eller uploades ikke, og ingen lyd når nogensinde udvikleren.</li><li><b>Apple Watch-app (valgfrig ledsager)</b> — Famora leveres med en valgfrig ledsager-app til Apple Watch. Den deler samme database som iPhone-appen via din egen iCloud-konto, så målinger foretaget på uret er præcis de data, der er beskrevet ovenfor. Ure-appen etablerer ingen selvstændige netværksforbindelser og indsamler intet af sig selv; du kan fjerne den fra uret når som helst.</li><li><b>Notifikationer</b> — kun lokale notifikationer, udelukkende brugt til at levere de måle- og medicinpåmindelser, du selv opretter, samt valgfrie familiesundhedsoverblik leveret som lokale notifikationer, når appen opdateres i baggrunden (iOS baggrundsopdatering). Ingen reklame- eller markedsføringsindhold og ingen egen push-infrastruktur.</li><li><b>Tilladelser, vi aldrig anmoder om</b> — ingen placering, kontakter, kamera, kalender eller App Tracking-godkendelse.</li></ul>
+<ul><li><b>Apple Sundhed (HealthKit)</b> — med dit udtrykkelige samtykke kan appen <b>skrive</b> målinger, du registrerer (blodtryk, blodsukker, vægt), til Sundhed-appen og <b>læse</b> blodtryks-, blodsukker- og vægtdata for at importere dem (f.eks. fra en tilkoblet blodtryksmåler). Sundhedsdata behandles på enheden og skrive/læses kun fra Apples Sundhedslager. <b>Udvikleren modtager aldrig, ser aldrig eller gemmer aldrig sundhedsdata.</b> Du kan give eller tilbagekalde hver tilladelse når som helst i Sundhed-appen.</li><li><b>iCloud (CloudKit)</b> — tilgås kun, hvis du aktiverer den ovenfor beskrevne Premium-familedeling; ellers oprettes ingen iCloud-forbindelse. CloudKit-overførsel og -opbevaring drives og krypteres af Apple efter Apples egen privatlivspolitik.</li><li><b>Foto-vælger (valgfrit profilbillede)</b> — hvis du vælger at angive et profilfoto, sker valget udelukkende via Apples systemindbyggede Foto-vælger: kun det enkelte billede, du udtrykkeligt vælger, kopieres, nedskaleres og gemmes i appens lokale database (og deles med profilen, når den valgfri iCloud-familedeling er aktiveret). Resten af dit fotobibliotek læses aldrig, og fotos uploades aldrig til nogen server. Du kan fjerne profilbilledet når som helst i profilleditoren.</li><li><b>Mikrofon og talegenkendelse (valgfri stemmeinput)</b> — med dit udtrykkelige samtykke kan du diktere målinger i stedet for at taste. Lyd behandles på enheden af Apples talegenkendelse i realtid, optages aldrig på disk, gemmes eller uploades ikke, og ingen lyd når nogensinde udvikleren.</li><li><b>Apple Watch-app (valgfrig ledsager)</b> — Famora leveres med en valgfri ledsager-app til Apple Watch. Den deler samme database som iPhone-appen via din egen iCloud-konto, så målinger foretaget på uret er præcis de data, der er beskrevet ovenfor. Ure-appen etablerer ingen selvstændige netværksforbindelser og indsamler intet af sig selv; du kan fjerne den fra uret når som helst.</li><li><b>Notifikationer</b> — kun lokale notifikationer, udelukkende brugt til at levere de måle- og medicinpåmindelser, du selv opretter, samt valgfrie familiesundhedsoverblik leveret som lokale notifikationer, når appen opdateres i baggrunden (iOS baggrundsopdatering). Ingen reklame- eller markedsføringsindhold og ingen egen push-infrastruktur.</li><li><b>Tilladelser, vi aldrig anmoder om</b> — ingen placering, kontakter, kamera, kalender eller App Tracking-godkendelse.</li></ul>
 <h3>3. Tredjeparter, sporing og reklamer: ingen</h3>
 <ul><li><b>Ingen tredjepartskode</b> — appen har ingen reklame-SDK, ingen analyse-SDK (ingen Firebase eller lignende), ingen crash-rapportering, attribution eller push-markedskomponent.</li><li><b>Ingen sporing</b> — ingen IDFA, ingen App Tracking Transparency-dialog, ingen på tværs af apps eller websteder, ingen enheds-fingerprinting.</li><li><b>Vi sælger, deler eller bytter aldrig brugerdata</b>, og vi driver ingen form for datamonetisering.</li><li><b>Køb</b> — det valgfrie Premium-abonnement behandles udelukkende af <b>Apples StoreKit</b>. Udvikleren ser aldrig dine betalingsoplysninger eller personlige identifikatorer; Apples egen privatlivspolitik gælder for transaktionen.</li><li><b>Ud over Apples tjenester</b> (HealthKit og StoreKit) er den eneste netværksanmodning, appen kan foretage, <b>indlæsning af denne privatlivs-/supportside</b> i den indbyggede læser (ingen adresselinje, ingen cookies, ingen identifikatorer, navigation til andre domæner er blokeret). Siden hostes af en tredjeparts statisk vært; indlæsning medfører ingen konto- eller enhedsoplysninger.</li></ul>
 <h3>4. Medicinsk ansvarsfraskrivelse</h3>
-<p>Famora er et <b>registrerings- og organiseringsværktøj for familier</b>, ikke medicinsk udstyr og ikke et reguleret diagnostisk produkt. Den måler ikke selv noget: alle målinger indtastes af brugeren eller importeres fra enheder tilkoblet Apple Health. Statistik (gennemsnit, antal, tendensgrafer, targetområde-markeringer) er <b>kun databeskrivelser</b> og udgør ikke medicinske konklusioner, diagnose eller behandlingsrådgivning. Konsulter altid en kvalificeret læge, før du træffer sundhedsbeslutninger.</p>
+<p>Famora er et <b>registrerings- og organiseringsværktøj for familier</b>, ikke medicinsk udstyr og ikke et reguleret diagnostisk produkt. Den måler ikke selv noget: alle målinger indtastes af brugeren eller importeres fra enheder tilkoblet Apple Health. Statistik (gennemsnit, antal, tendensgrafer, målområde-markeringer) er <b>kun databeskrivelser</b> og udgør ikke medicinske konklusioner, diagnose eller behandlingsrådgivning. Konsulter altid en kvalificeret læge, før du træffer sundhedsbeslutninger.</p>
 <h3>5. Datalagring og sletning</h3>
 <ul><li>Dine data findes kun i den lokale database på denne enhed.</li><li>Du kan slette alle måle- og medicindata når som helst via <b>Indstillinger → Profil → Ryd alle måle- og medicindata</b>.</li><li>Sletning af en profil <b>sletter profilen permanent sammen med alle blodtryks-, blodsukker-, vægt- og medicindata registreret under den</b>; dette kan ikke gendannes. Afinstallation af appen fjerner hele den lokale database.</li></ul>
 <h3>6. Børns privatliv</h3>
@@ -134,7 +143,7 @@
 <h3>Er der en Apple Watch-app?</h3>
 <p>Ja — Famora inkluderer en ledsager-app til Apple Watch. Når du har installeret Famora på din iPhone, skal du tilføje den til uret fra Watch-appen. Den ældre kan registrere blodtryk, blodsukker og medicintjek direkte fra håndleddet, og data synkroniseres automatisk med iPhone via din egen iCloud. Watch-appen er valgfri og indsamler intet af sig selv.</p>
 <h3>Hvordan opsætter jeg appen til et ældre familiemedlem?</h3>
-<p>Først gennemfør opsætningen selv (profiler, targetområder, påmindelser), og slå derefter <b>Ældremode</b> til under <b>Indstillinger → Familedeling</b>. Ældremode bruger større tekst og skjuler avancerede indstillinger, så den ældre blot kan registrere målinger uden at røre nogen konfiguration.</p>
+<p>Først gennemfør opsætningen selv (profiler, målområder, påmindelser), og slå derefter <b>Ældremode</b> til under <b>Indstillinger → Familedeling</b>. Ældremode bruger større tekst og skjuler avancerede indstillinger, så den ældre blot kan registrere målinger uden at røre nogen konfiguration.</p>
 <h3>Hvordan importerer jeg data fra min blodtryksmåler?</h3>
 <p>Tilkobl din enhed med Apple Sundhed (mange Omron og lignende målere kan dette), og åbn derefter i Famora <b>Indstillinger → Sundhed → Importér seneste 30 dage</b>. Målingerne vises under Hjem og Tendenser.</p>
 <h3>Hvordan deler jeg en rapport med min læge?</h3>
@@ -142,7 +151,7 @@
 <h3>Appen viser en værdi i mmol/L, men min enhed bruger mg/dL (eller omvendt).</h3>
 <p>Åbn <b>Indstillinger → Målområder → Glukoseenhed</b>, og skift mellem mg/dL og mmol/L. Internt gemmes alle værdier i mg/dL; skiftet ændrer kun, hvordan værdier vises og indtastes.</p>
 <h3>Kan jeg bruge pund i stedet for kilogram til vægt?</h3>
-<p>Ja — åbn <b>Indstillinger → Targetområder → Vægtenhed</b>, og skift mellem kg og lb. Standarden følger dit appsprog (engelsk bruger lb som standard, andre sprog kg). Alle værdier gemmes internt i kilogram; skiftet ændrer kun visning og input, og historikken konverteres automatisk.</p>
+<p>Ja — åbn <b>Indstillinger → Målområder → Vægtenhed</b>, og skift mellem kg og lb. Standarden følger dit appsprog (engelsk bruger lb som standard, andre sprog kg). Alle værdier gemmes internt i kilogram; skiftet ændrer kun visning og input, og historikken konverteres automatisk.</p>
 <h3>Jeg slettede en profil ved en fejl. Kan jeg gendanne den?</h3>
 <p>Nej — sletning af en profil <b>sletter permanent alle blodtryks-, blodsukker-, vægt- og medicindata registreret under den</b>, og det kan ikke gendannes. Du kan tilføje en ny profil med samme navn for at fortsætte registreringen, men historikken er væk. Gem en kopi ved at eksportere PDF-rapporten til lægebesøget, før du sletter.</p>
   </div>
